@@ -1,0 +1,44 @@
+<!-- @dsCard group="Court dApp" viewport="1440x900" name="Juror Dashboard" subtitle="Court v2 juror home — stats, staked courts, active cases" -->
+<!-- @startingPoint section="Court dApp" subtitle="Kleros Court juror dashboard" viewport="1440x900" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kleros Court — Juror Dashboard</title>
+<link rel="stylesheet" href="../../styles.css" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js?v=4"></script>
+<style>
+  body { margin: 0; background: var(--k-bg-2); }
+  .page { width: 1440px; margin: 0 auto; min-height: 900px; background: var(--gradient-dark); }
+</style>
+</head>
+<body class="k-root">
+  <div id="root"></div>
+  <script type="text/babel" src="sections.jsx"></script>
+  <script type="text/babel">
+    function CourtApp() {
+      return (
+        <div className="page k-dark">
+          <CourtTopBar />
+          <main>
+            <DashboardHeader />
+            <JurorStats />
+            <MyCourts />
+            <MyCases />
+          </main>
+          <CourtFooter />
+        </div>
+      );
+    }
+    const start = () => {
+      if (!window.MyCases) return void requestAnimationFrame(start);
+      ReactDOM.createRoot(document.getElementById('root')).render(<CourtApp />);
+    };
+    start();
+  </script>
+</body>
+</html>
