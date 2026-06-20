@@ -1,0 +1,35 @@
+/* ============================================================
+   KLEROS — SPACING, RADII & LAYOUT TOKENS
+   Base unit 8px. All spacing is a multiple of 8.
+   Horizontal layout uses a Responsive 2x Fluid 24-grid.
+   ============================================================ */
+:root {
+  /* Base 8px scale (in use) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+  --space-8: 64px;
+  /* Expansion scale */
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-16: 128px;
+  --space-20: 160px;
+  --space-24: 192px;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;     /* cards */
+  --radius-xl: 24px;
+  --radius-pill: 300px;  /* buttons / pills */
+  --radius-full: 9999px;
+
+  /* Layout */
+  --grid-columns: 24; /* @kind other */
+  --container-max: 1440px;
+  --container-content: 1184px;  /* 1440 - 2x128 gutter */
+  --gutter: 32px;
+  --navbar-height: 80px;
+}

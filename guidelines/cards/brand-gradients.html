@@ -1,0 +1,22 @@
+<!-- @dsCard group="Brand" viewport="700x160" name="Gradients & backgrounds" subtitle="Signature purple→blue · deep-purple wallpaper" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  body { margin: 0; padding: 20px; background: #fff; }
+  .row { display: flex; gap: 14px; }
+  .tile { flex:1; height: 116px; border-radius: var(--radius-lg); display:flex; align-items:flex-end; padding: 12px 14px; color: #fff; font-size: 13px; font-weight: 600; box-sizing: border-box; overflow: hidden; }
+  .tile.img { background-size: cover; background-position: center; }
+</style>
+</head>
+<body class="k-root">
+  <div class="row">
+    <div class="tile" style="background: var(--gradient-brand)">Brand gradient</div>
+    <div class="tile" style="background: var(--gradient-hero)">Hero radial</div>
+    <div class="tile img" style="background-image: url('../../assets/backgrounds/bg-home.png')">Home wallpaper</div>
+    <div class="tile img" style="background-image: url('../../assets/backgrounds/bg-brand-assets.png')">Brand wallpaper</div>
+  </div>
+</body>
+</html>

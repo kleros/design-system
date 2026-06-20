@@ -1,0 +1,25 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Radii & elevation" subtitle="4 / 8 / 16 / pill · soft shadows" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  body { margin: 0; padding: 22px; background: #fff; color: var(--k-ink-2); font-family: var(--font-body); }
+  .row { display: flex; gap: 22px; align-items: center; }
+  .item { display: flex; flex-direction: column; gap: 8px; align-items: center; }
+  .box { width: 84px; height: 64px; background: #fff; border: 1px solid var(--k-line); }
+  .lab { font-size: 12px; }
+</style>
+</head>
+<body class="k-root">
+  <div class="row">
+    <div class="item"><div class="box" style="border-radius:4px"></div><span class="lab">sm · 4</span></div>
+    <div class="item"><div class="box" style="border-radius:8px"></div><span class="lab">md · 8</span></div>
+    <div class="item"><div class="box" style="border-radius:16px"></div><span class="lab">lg · 16</span></div>
+    <div class="item"><div class="box" style="border-radius:300px; width:110px"></div><span class="lab">pill</span></div>
+    <div class="item"><div class="box" style="border-radius:16px; border:none; box-shadow: var(--shadow-sm)"></div><span class="lab">shadow-sm</span></div>
+    <div class="item"><div class="box" style="border-radius:16px; border:none; box-shadow: var(--shadow-md)"></div><span class="lab">shadow-md</span></div>
+  </div>
+</body>
+</html>

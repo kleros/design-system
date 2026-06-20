@@ -1,0 +1,127 @@
+/* ============================================================
+   KLEROS — COLOR TOKENS
+   Sourced from the "Website Redesign 2024" Figma brand page.
+   "Purple at the core, blue on details."
+   ============================================================ */
+:root {
+  /* ---- Brand: Purple ---- */
+  --k-purple: #9013FE;            /* Primary Purple */
+  --k-purple-2: #9747FF;          /* Secondary Purple (most-used accent) */
+  --k-purple-soft: #A675FE;       /* Soft/lighter purple */
+  --k-purple-tint: #D38BFF;       /* Tint for hovers on dark */
+  --k-violet-deep: #7E1BD4;       /* Deep brand violet (swatch cards) */
+
+  /* ---- Brand: Blue / Cyan (the "detail" accent) ---- */
+  --k-blue: #27CDFE;              /* Primary Blue — primary button / CTA */
+  --k-blue-2: #7CE2FF;            /* Secondary Blue */
+  --k-blue-link: #009AFF;         /* Link / info blue */
+  --k-cyan: #39CEFE;              /* Cyan used on buttons */
+
+  /* ---- Brand: Backgrounds (deep purple) ---- */
+  --k-bg-1: #220050;              /* Background 1 — primary dark surface */
+  --k-bg-2: #1B003F;              /* Background 2 — deeper dark */
+  --k-bg-3: #27005C;              /* Raised dark surface */
+  --k-bg-overlay: #320070;        /* Hover surface on dark */
+
+  /* ---- Ink on dark (deep-purple) surfaces ---- */
+  --k-on-dark-1: #FFFFFF;         /* Primary text on dark */
+  --k-on-dark-2: #DAF0FF;         /* Secondary text on dark (light blue) */
+  --k-on-dark-3: #BECCE5;         /* Tertiary / muted text on dark */
+  --k-on-dark-border: #42498F;    /* Hairline borders on dark */
+  --k-on-dark-border-soft: #2E2A6B;
+
+  /* ---- Neutrals (light theme) ---- */
+  --k-white: #FFFFFF;
+  --k-ink-1: #333333;             /* Primary text on light */
+  --k-ink-2: #666666;             /* Secondary text on light */
+  --k-ink-3: #999999;             /* Tertiary text / placeholder */
+  --k-line: #E5E5E5;              /* Borders on light */
+  --k-line-soft: #EEEEEE;
+  --k-surface: #FFFFFF;           /* Card surface on light */
+  --k-surface-2: #FAFAFA;         /* Subtle raised surface */
+  --k-surface-3: #F5F7FB;         /* Tinted panel */
+
+  /* ---- Semantic ---- */
+  --k-success: #00C42B;
+  --k-success-bg: #BFFFCD;
+  --k-error: #F60C36;
+  --k-error-bg: #FFDBE2;
+  --k-warning: #C8B100;
+  --k-warning-bg: #FFF6B8;
+  --k-info: #009AFF;
+  --k-info-bg: #DAF0FF;
+  --k-pink: #FF5A78;              /* Accent pink (highlights) */
+
+  /* ============================================================
+     SEMANTIC ALIASES — default = LIGHT context
+     ============================================================ */
+  --color-bg: var(--k-white);
+  --color-surface: var(--k-surface);
+  --color-surface-raised: var(--k-surface-2);
+  --color-surface-tint: var(--k-surface-3);
+  --color-border: var(--k-line);
+  --color-border-strong: #CCCCCC;
+
+  --text-primary: var(--k-ink-1);
+  --text-secondary: var(--k-ink-2);
+  --text-tertiary: var(--k-ink-3);
+  --text-on-accent: var(--k-white);
+  --text-link: var(--k-blue-link);
+
+  --color-accent: var(--k-blue);        /* primary action (cyan) */
+  --color-accent-hover: #14B6E8;
+  --color-accent-press: #0FA0CC;
+  --color-brand: var(--k-purple);       /* brand purple */
+  --color-brand-hover: #7E1BD4;
+  --color-focus-ring: var(--k-purple-2);
+}
+
+/* ============================================================
+   LIGHT CONTEXT — reset to light tokens inside a .k-dark subtree
+   (e.g. a white card sitting on a deep-purple band).
+   ============================================================ */
+.k-light {
+  --color-bg: var(--k-white);
+  --color-surface: var(--k-surface);
+  --color-surface-raised: var(--k-surface-2);
+  --color-surface-tint: var(--k-surface-3);
+  --color-border: var(--k-line);
+  --color-border-strong: #CCCCCC;
+  --text-primary: var(--k-ink-1);
+  --text-secondary: var(--k-ink-2);
+  --text-tertiary: var(--k-ink-3);
+  --text-on-accent: var(--k-white);
+  --text-link: var(--k-blue-link);
+  --color-accent: var(--k-blue);
+  --color-accent-hover: #14B6E8;
+  --color-accent-press: #0FA0CC;
+  --color-brand: var(--k-purple);
+  --color-brand-hover: #7E1BD4;
+  --color-focus-ring: var(--k-purple-2);
+}
+
+/* ============================================================
+   DARK CONTEXT — deep-purple surfaces (the website default look).
+   Apply via class .k-dark on any container (or <body>).
+   ============================================================ */
+.k-dark {
+  --color-bg: var(--k-bg-1);
+  --color-surface: var(--k-bg-3);
+  --color-surface-raised: var(--k-bg-overlay);
+  --color-surface-tint: var(--k-bg-2);
+  --color-border: var(--k-on-dark-border);
+  --color-border-strong: #565CA0;
+
+  --text-primary: var(--k-on-dark-1);
+  --text-secondary: var(--k-on-dark-2);
+  --text-tertiary: var(--k-on-dark-3);
+  --text-on-accent: var(--k-white);
+  --text-link: var(--k-blue-2);
+
+  --color-accent: var(--k-blue);
+  --color-accent-hover: #5CDBFF;
+  --color-accent-press: #14B6E8;
+  --color-brand: var(--k-purple-2);
+  --color-brand-hover: var(--k-purple-tint);
+  --color-focus-ring: var(--k-blue-2);
+}

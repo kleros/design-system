@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" viewport="700x320" name="Navbar & Footer" subtitle="Kleros website chrome (deep-purple)" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js?v=4"></script>
+<style>
+  body { margin: 0; background: var(--k-bg-1); }
+  .stack { display: flex; flex-direction: column; }
+</style>
+</head>
+<body>
+  <div id="root" class="stack k-dark"></div>
+  <script type="text/babel">
+    const { Navbar, Footer } = window.KlerosDesignSystem_398995;
+    ReactDOM.createRoot(document.getElementById('root')).render(
+      <>
+        <Navbar />
+        <Footer />
+      </>
+    );
+  </script>
+</body>
+</html>

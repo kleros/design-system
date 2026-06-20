@@ -1,0 +1,23 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Semantic" subtitle="Success · Error · Warning · Info" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  body { margin: 0; font-family: var(--font-body); background: #fff; padding: 20px; }
+  .row { display: flex; gap: 14px; flex-wrap: wrap; }
+  .item { display:flex; flex-direction:column; gap:8px; align-items:center; }
+  .sw { width: 150px; height: 64px; border-radius: var(--radius-md); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:600; font-size:14px; }
+  .chip { font-size:12px; font-weight:600; padding:4px 10px; border-radius:999px; }
+</style>
+</head>
+<body class="k-root">
+  <div class="row">
+    <div class="item"><div class="sw" style="background:var(--k-success)">#00C42B</div><span class="chip" style="background:var(--k-success-bg); color:#0a7d24">Success</span></div>
+    <div class="item"><div class="sw" style="background:var(--k-error)">#F60C36</div><span class="chip" style="background:var(--k-error-bg); color:#c1042a">Error</span></div>
+    <div class="item"><div class="sw" style="background:var(--k-warning); color:#3a3300">#C8B100</div><span class="chip" style="background:var(--k-warning-bg); color:#8a7900">Warning</span></div>
+    <div class="item"><div class="sw" style="background:var(--k-info)">#009AFF</div><span class="chip" style="background:var(--k-info-bg); color:#0a6fb3">Info</span></div>
+  </div>
+</body>
+</html>

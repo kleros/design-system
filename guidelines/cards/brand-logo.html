@@ -1,0 +1,37 @@
+<!-- @dsCard group="Brand" viewport="700x180" name="Logo & symbol" subtitle="Wordmark + polyhedron mark, currentColor" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js?v=4"></script>
+<style>
+  body { margin: 0; }
+  .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 20px; }
+  .panel { border-radius: var(--radius-lg); padding: 28px; display: flex; align-items: center; justify-content: center; gap: 28px; }
+  .dark { background: var(--k-bg-1); }
+  .light { background: #fff; border: 1px solid var(--k-line); }
+</style>
+</head>
+<body class="k-root">
+  <div class="wrap" id="root"></div>
+  <script type="text/babel">
+    const { Logo } = window.KlerosDesignSystem_398995;
+    ReactDOM.createRoot(document.getElementById('root')).render(
+      <>
+        <div className="panel dark">
+          <Logo height={30} style={{ color: '#fff' }} />
+          <Logo variant="symbol" height={44} style={{ color: '#fff' }} />
+        </div>
+        <div className="panel light">
+          <Logo height={30} style={{ color: '#9013FE' }} />
+          <Logo variant="symbol" height={44} style={{ color: '#9013FE' }} />
+        </div>
+      </>
+    );
+  </script>
+</body>
+</html>

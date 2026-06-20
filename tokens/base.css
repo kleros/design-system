@@ -1,0 +1,28 @@
+/* ============================================================
+   KLEROS — base element styling (opt-in helpers + sensible resets).
+   Keep this light: tokens do the work. Class .k-root sets the
+   default type + colors for any subtree.
+   ============================================================ */
+.k-root {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+  color: var(--text-primary);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Heading helpers */
+.k-display-1 { font-family: var(--font-display); font-weight: var(--weight-medium); font-size: var(--text-display-1); line-height: var(--leading-tight); letter-spacing: var(--tracking-tight); }
+.k-display-2 { font-family: var(--font-display); font-weight: var(--weight-medium); font-size: var(--text-display-2); line-height: var(--leading-tight); letter-spacing: var(--tracking-tight); }
+.k-h1 { font-family: var(--font-heading); font-weight: var(--weight-medium); font-size: var(--text-h1); line-height: var(--leading-tight); }
+.k-h2 { font-family: var(--font-heading); font-weight: var(--weight-medium); font-size: var(--text-h2); line-height: var(--leading-snug); }
+.k-h3 { font-family: var(--font-heading); font-weight: var(--weight-medium); font-size: var(--text-h3); line-height: var(--leading-snug); }
+.k-body { font-family: var(--font-body); font-weight: var(--weight-regular); font-size: var(--text-body); line-height: var(--leading-normal); }
+.k-body-sm { font-size: var(--text-sm); line-height: var(--leading-normal); }
+.k-prose { font-family: var(--font-editorial); font-size: var(--text-body); line-height: var(--leading-relaxed); }
+.k-eyebrow { font-family: var(--font-body); font-weight: var(--weight-semibold); font-size: var(--text-xs); letter-spacing: var(--tracking-caps); text-transform: uppercase; }
+
+.k-link { color: var(--text-link); text-decoration: none; transition: opacity .15s ease; }
+.k-link:hover { opacity: .8; }

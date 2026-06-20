@@ -1,0 +1,154 @@
+/* ============================================================
+   KLEROS — component styles. Prefixed .k- ; consumed by the
+   React primitives in components/core/*.jsx. All values resolve
+   from the design-system tokens.
+   ============================================================ */
+
+/* ---------------- Button ---------------- */
+.k-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: var(--space-1);
+  font-family: var(--font-body); font-weight: var(--weight-medium);
+  font-size: var(--text-body); line-height: 1;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  cursor: pointer; white-space: nowrap; text-decoration: none;
+  transition: background-color .16s ease, color .16s ease, box-shadow .16s ease, opacity .16s ease, transform .06s ease;
+  box-sizing: border-box; user-select: none;
+}
+.k-btn:focus-visible { outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-focus-ring) 55%, transparent); }
+.k-btn:active { transform: translateY(1px); }
+.k-btn[disabled], .k-btn[aria-disabled="true"] { opacity: .4; cursor: not-allowed; pointer-events: none; }
+
+/* sizes */
+.k-btn--sm { height: 36px; padding: 0 20px; font-size: var(--text-sm); }
+.k-btn--md { height: 48px; padding: 0 32px; }
+.k-btn--lg { height: 56px; padding: 0 40px; font-size: var(--text-body-lg); }
+
+/* variants */
+.k-btn--primary { background: var(--color-accent); color: var(--text-on-accent); }
+.k-btn--primary:hover { background: var(--color-accent-hover); }
+.k-btn--primary:active { background: var(--color-accent-press); }
+
+.k-btn--brand { background: var(--gradient-brand); color: #fff; }
+.k-btn--brand:hover { box-shadow: var(--glow-purple); }
+
+.k-btn--secondary { background: transparent; color: var(--text-primary); border-color: var(--color-border-strong); }
+.k-btn--secondary:hover { background: color-mix(in srgb, var(--text-primary) 8%, transparent); }
+.k-dark .k-btn--secondary { color: #fff; border-color: rgba(255,255,255,.7); }
+.k-dark .k-btn--secondary:hover { background: rgba(255,255,255,.16); border-color: #fff; }
+
+.k-btn--tertiary { background: transparent; color: var(--color-accent); }
+.k-btn--tertiary:hover { background: color-mix(in srgb, var(--color-accent) 12%, transparent); }
+
+.k-btn--ghost { background: transparent; color: var(--text-secondary); }
+.k-btn--ghost:hover { background: color-mix(in srgb, var(--text-primary) 6%, transparent); color: var(--text-primary); }
+
+.k-btn__icon { display: inline-flex; width: 1em; height: 1em; }
+
+/* ---------------- IconButton ---------------- */
+.k-iconbtn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: var(--radius-full);
+  background: transparent; color: var(--text-secondary);
+  border: 1px solid transparent; cursor: pointer;
+  transition: background-color .16s ease, color .16s ease;
+}
+.k-iconbtn:hover { background: color-mix(in srgb, var(--text-primary) 8%, transparent); color: var(--text-primary); }
+.k-iconbtn--outline { border-color: var(--color-border); }
+.k-iconbtn:focus-visible { outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-focus-ring) 55%, transparent); }
+
+/* ---------------- Input / Textarea ---------------- */
+.k-field { display: flex; flex-direction: column; gap: 6px; }
+.k-label { font-size: var(--text-sm); font-weight: var(--weight-medium); color: var(--text-secondary); }
+.k-input, .k-textarea {
+  font-family: var(--font-body); font-size: var(--text-body); color: var(--text-primary);
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-md); padding: 0 16px; height: 48px;
+  transition: border-color .16s ease, box-shadow .16s ease; box-sizing: border-box; width: 100%;
+}
+.k-textarea { height: auto; min-height: 112px; padding: 12px 16px; resize: vertical; line-height: var(--leading-normal); }
+.k-input::placeholder, .k-textarea::placeholder { color: var(--text-tertiary); }
+.k-input:focus, .k-textarea:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 22%, transparent); }
+.k-input--error, .k-textarea--error { border-color: var(--k-error); }
+.k-help { font-size: var(--text-xs); color: var(--text-tertiary); }
+.k-help--error { color: var(--k-error); }
+.k-dark .k-input, .k-dark .k-textarea { background: rgba(255,255,255,.04); }
+
+/* ---------------- Checkbox & Radio ---------------- */
+.k-check { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font-size: var(--text-body); color: var(--text-primary); user-select: none; }
+.k-check input { position: absolute; opacity: 0; width: 0; height: 0; }
+.k-check__box {
+  width: 18px; height: 18px; border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border-strong); background: var(--color-surface);
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+  transition: background-color .14s ease, border-color .14s ease;
+}
+.k-check__box svg { width: 12px; height: 12px; opacity: 0; transform: scale(.6); transition: opacity .14s ease, transform .14s ease; color: #fff; }
+.k-check input:checked + .k-check__box { background: var(--k-info); border-color: var(--k-info); }
+.k-check input:checked + .k-check__box svg { opacity: 1; transform: scale(1); }
+.k-check input:focus-visible + .k-check__box { box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-focus-ring) 45%, transparent); }
+.k-check__box--radio { border-radius: var(--radius-full); }
+.k-check__box--radio .k-radio-dot { width: 8px; height: 8px; border-radius: var(--radius-full); background: #fff; opacity: 0; transform: scale(.4); transition: opacity .14s ease, transform .14s ease; }
+.k-check input:checked + .k-check__box--radio { background: var(--k-info); border-color: var(--k-info); }
+.k-check input:checked + .k-check__box--radio .k-radio-dot { opacity: 1; transform: scale(1); }
+
+/* ---------------- Switch ---------------- */
+.k-switch { position: relative; display: inline-flex; align-items: center; cursor: pointer; }
+.k-switch input { position: absolute; opacity: 0; width: 0; height: 0; }
+.k-switch__track { width: 40px; height: 22px; border-radius: var(--radius-full); background: var(--color-border-strong); transition: background-color .18s ease; }
+.k-switch__thumb { position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: var(--radius-full); background: #fff; box-shadow: var(--shadow-sm); transition: transform .18s ease; }
+.k-switch input:checked ~ .k-switch__track { background: var(--color-accent); }
+.k-switch input:checked ~ .k-switch__thumb { transform: translateX(18px); }
+.k-switch input:focus-visible ~ .k-switch__track { box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-focus-ring) 45%, transparent); }
+
+/* ---------------- Tag / Pill ---------------- */
+.k-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 32px; padding: 0 16px; border-radius: var(--radius-pill);
+  font-size: var(--text-sm); font-weight: var(--weight-medium); white-space: nowrap;
+  background: color-mix(in srgb, var(--color-accent) 14%, transparent); color: var(--color-accent);
+  border: 1px solid transparent; cursor: default;
+}
+.k-tag--selectable { cursor: pointer; transition: background-color .14s ease, color .14s ease; }
+.k-tag--selected { background: var(--color-accent); color: var(--text-on-accent); }
+.k-tag--outline { background: transparent; border-color: var(--color-border); color: var(--text-secondary); }
+.k-dark .k-tag--outline { border-color: var(--color-border); color: var(--text-secondary); }
+
+/* ---------------- Badge ---------------- */
+.k-badge { display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 10px; border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: var(--weight-semibold); letter-spacing: .01em; }
+.k-badge--neutral { background: var(--color-surface-tint); color: var(--text-secondary); }
+.k-badge--success { background: var(--k-success-bg); color: #0a7d24; }
+.k-badge--error { background: var(--k-error-bg); color: #c1042a; }
+.k-badge--warning { background: var(--k-warning-bg); color: #8a7900; }
+.k-badge--info { background: var(--k-info-bg); color: #0a6fb3; }
+.k-badge--dot::before { content:""; width:6px; height:6px; border-radius:50%; background: currentColor; }
+
+/* ---------------- Card ---------------- */
+.k-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); overflow: hidden; }
+.k-card--flat { box-shadow: none; }
+.k-card--interactive { cursor: pointer; transition: transform .18s ease, box-shadow .18s ease; }
+.k-card--interactive:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.k-dark .k-card { box-shadow: var(--shadow-dark-sm); }
+.k-card__body { padding: var(--space-3); }
+
+/* ---------------- Tabs ---------------- */
+.k-tabs { display: inline-flex; gap: 4px; border-bottom: 1px solid var(--color-border); }
+.k-tab { appearance: none; background: none; border: none; cursor: pointer; font-family: var(--font-body); font-size: var(--text-body); font-weight: var(--weight-medium); color: var(--text-secondary); padding: 12px 16px; position: relative; transition: color .14s ease; }
+.k-tab:hover { color: var(--text-primary); }
+.k-tab--active { color: var(--color-accent); }
+.k-tab--active::after { content:""; position: absolute; left: 12px; right: 12px; bottom: -1px; height: 2px; border-radius: 2px; background: var(--color-accent); }
+
+/* ---------------- Select ---------------- */
+.k-select { position: relative; display: inline-flex; align-items: center; }
+.k-select select {
+  appearance: none; font-family: var(--font-body); font-size: var(--text-body); color: var(--text-primary);
+  background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md);
+  height: 48px; padding: 0 44px 0 16px; cursor: pointer; width: 100%; box-sizing: border-box;
+}
+.k-select select:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 22%, transparent); }
+.k-select__chevron { position: absolute; right: 16px; pointer-events: none; color: var(--text-tertiary); display: inline-flex; }
+
+/* ---------------- Avatar ---------------- */
+.k-avatar { display: inline-flex; align-items: center; justify-content: center; border-radius: var(--radius-full); background: var(--gradient-brand); color: #fff; font-weight: var(--weight-semibold); overflow: hidden; flex: none; }
+.k-avatar img { width: 100%; height: 100%; object-fit: cover; }

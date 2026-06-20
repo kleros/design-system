@@ -1,0 +1,64 @@
+<!-- @dsCard group="Components" viewport="700x360" name="Buttons, tags & badges" subtitle="Actions in every variant, size & state" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js?v=4"></script>
+<style>
+  body { margin: 0; background: #fff; }
+  .grid { display: flex; flex-direction: column; gap: 22px; padding: 24px; }
+  .group { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .cap { font-family: var(--font-body); font-size: 12px; color: var(--k-ink-3); width: 100%; }
+</style>
+</head>
+<body class="k-root">
+  <div id="root" class="grid"></div>
+  <script type="text/babel">
+    const K = window.KlerosDesignSystem_398995;
+    const { Button, IconButton, Tag, Badge, Icon } = K;
+    function Demo() {
+      return (
+        <>
+          <div className="group">
+            <span className="cap">Variants — primary · brand · secondary · tertiary · ghost</span>
+            <Button variant="primary">Enter Court</Button>
+            <Button variant="brand">Get started</Button>
+            <Button variant="secondary">Learn more</Button>
+            <Button variant="tertiary">Docs</Button>
+            <Button variant="ghost">Cancel</Button>
+            <Button variant="primary" disabled>Disabled</Button>
+          </div>
+          <div className="group">
+            <span className="cap">Sizes & icons</span>
+            <Button variant="primary" size="sm">Small</Button>
+            <Button variant="primary" size="md" iconLeft={<Icon name="IconsGavel" />}>Resolve</Button>
+            <Button variant="brand" size="lg">Large CTA</Button>
+            <IconButton label="Menu"><Icon name="IconsMenu" /></IconButton>
+            <IconButton outline label="Theme"><Icon name="IconsMoon" /></IconButton>
+          </div>
+          <div className="group">
+            <span className="cap">Tags / use-case pills</span>
+            <Tag selectable selected>DeFi</Tag>
+            <Tag selectable>Insurance</Tag>
+            <Tag selectable>Marketplaces</Tag>
+            <Tag variant="outline">DAOs</Tag>
+          </div>
+          <div className="group">
+            <span className="cap">Badges</span>
+            <Badge variant="success" dot>Resolved</Badge>
+            <Badge variant="warning">Appeal period</Badge>
+            <Badge variant="error">Challenged</Badge>
+            <Badge variant="info">Evidence</Badge>
+            <Badge variant="neutral">Draft</Badge>
+          </div>
+        </>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+  </script>
+</body>
+</html>

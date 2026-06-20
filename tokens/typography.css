@@ -1,0 +1,47 @@
+/* ============================================================
+   KLEROS — TYPOGRAPHY TOKENS
+   Primary: Urbanist (UI + headings + body).
+   Secondary: Open Sans (long-form editorial prose).
+   Type scale from the Figma "Typeface" specimen: 96/64/48/32/24/16/14.
+   Weights used: Regular 400, Medium 500, SemiBold 600.
+   ============================================================ */
+:root {
+  /* Families */
+  --font-sans: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-prose: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: var(--font-sans);
+
+  /* Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Type scale (px) — multiples follow the website spec */
+  --text-display-1: 96px;
+  --text-display-2: 64px;
+  --text-h1: 48px;
+  --text-h2: 32px;
+  --text-h3: 24px;
+  --text-body-lg: 18px;
+  --text-body: 16px;
+  --text-sm: 14px;
+  --text-xs: 12px;
+
+  /* Line heights */
+  --leading-tight: 1.1;     /* display / headings */
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;    /* body */
+  --leading-relaxed: 1.6;   /* prose */
+
+  /* Letter spacing */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-caps: 0.08em;  /* SECURED BY KLEROS style labels */
+
+  /* Semantic roles */
+  --font-heading: var(--font-sans);
+  --font-body: var(--font-sans);
+  --font-editorial: var(--font-prose);
+}

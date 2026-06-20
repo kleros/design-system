@@ -1,0 +1,30 @@
+/* ============================================================
+   KLEROS — EFFECTS: shadows, gradients, blur
+   Shadows are soft and low-opacity (rgba(0,0,0,~0.06)).
+   Signature gradient runs purple -> blue/cyan.
+   ============================================================ */
+:root {
+  /* Elevation — light context */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.10);
+
+  /* Elevation — dark context (cast with brand purple) */
+  --shadow-dark-sm: 0 2px 12px rgba(8,0,24,0.40);
+  --shadow-dark-md: 0 12px 40px rgba(8,0,24,0.55);
+
+  /* Glow — accent halo behind hero CTAs / tokens */
+  --glow-blue: 0 0 48px rgba(39,205,254,0.45);
+  --glow-purple: 0 0 56px rgba(144,19,254,0.45);
+
+  /* Signature gradients */
+  --gradient-brand: linear-gradient(97deg, #9013FE 0%, #27CDFE 100%); /* @kind color */
+  --gradient-brand-soft: linear-gradient(97deg, #A675FE 0%, #7CE2FF 100%); /* @kind color */
+  --gradient-purple: linear-gradient(180deg, #9013FE 0%, #7E1BD4 100%); /* @kind color */
+  --gradient-dark: linear-gradient(180deg, #220050 0%, #1B003F 100%); /* @kind color */
+  --gradient-hero: radial-gradient(120% 120% at 50% 0%, #320070 0%, #220050 45%, #1B003F 100%); /* @kind color */
+
+  /* Border that fades (protection edge over imagery) */
+  --fade-bottom: linear-gradient(180deg, rgba(27,0,63,0) 0%, #1B003F 100%); /* @kind color */
+}
